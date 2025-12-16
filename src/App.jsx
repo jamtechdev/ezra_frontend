@@ -1,20 +1,24 @@
-import { HashRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Customer from './pages/Customer';
-import Provider from './pages/Provider';
-import Plumbing from './pages/Plumbing';
-import Cleaning from './pages/Cleaning';
-import Moving from './pages/Moving';
-import Electrician from './pages/Electrician';
-import Assembly from './pages/Assembly';
-import Terms from './pages/Terms';
-import './App.css';
+import { HashRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Customer from "./pages/Customer";
+import Provider from "./pages/Provider";
+import Plumbing from "./pages/Plumbing";
+import Cleaning from "./pages/Cleaning";
+import Moving from "./pages/Moving";
+import Electrician from "./pages/Electrician";
+import Assembly from "./pages/Assembly";
+import Terms from "./pages/Terms";
+import "./App.css";
+import LoginPage from "./pages/login";
+import SignUp from "./pages/SignUp";
 
 function App() {
   return (
     <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/customer" element={<Customer />} />
         <Route path="/provider" element={<Provider />} />
         <Route path="/plumbing" element={<Plumbing />} />

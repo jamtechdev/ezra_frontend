@@ -9,8 +9,8 @@ import Electrician from "./pages/Electrician";
 import Assembly from "./pages/Assembly";
 import Terms from "./pages/Terms";
 import "./App.css";
-import LoginPage from "./pages/login";
 import SignUp from "./pages/SignUp";
+import LoginPage from "./pages/Login";
 
 function App() {
   return (

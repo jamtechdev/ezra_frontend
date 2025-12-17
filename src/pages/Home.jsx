@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Header from "../component/Header";
 
 const SERVICE_OPTIONS = [
   {
@@ -399,7 +400,7 @@ export default function Home() {
   return (
     <div style={{ minHeight: "100vh", background: "#ffffff" }}>
       {/* NAV / HEADER - Sticky */}
-      <header
+      {/* <header
         className="main-header"
         style={{
           position: "sticky",
@@ -487,7 +488,8 @@ export default function Home() {
             Get Help
           </button>
         </nav>
-      </header>
+      </header> */}
+      <Header onOpenHelp={openHelpModal} onOpenProvider={openProviderModal} />
 
       {/* CTA BUTTONS AT TOP */}
       <div
@@ -1940,7 +1942,7 @@ export default function Home() {
         </div>
       )}
 
-      <style>{`
+      {/* <style>{`
         @keyframes scrollRight {
           0% {
             transform: translateX(0);
@@ -1965,7 +1967,7 @@ export default function Home() {
           66% { transform: translate(-20px, 20px) rotate(240deg); }
         }
 
-        /* Mobile Responsive Styles */
+        
         @media (max-width: 768px) {
           .main-header {
             padding: 12px 20px !important;
@@ -2025,7 +2027,7 @@ export default function Home() {
             padding: 40px 16px !important;
           }
         }
-      `}</style>
+      `}</style> */}
     </div>
   );
 }

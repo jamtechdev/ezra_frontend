@@ -45,12 +45,6 @@ export default function LoginPage() {
               </button>
             ))}
           </div>
-
-          {/* Tab Content */}
-          {/* <div className="mt-4 text-sm text-slate-600">
-            {activeTab === "customer" && <p>Customer content</p>}
-            {activeTab === "tasker" && <p>Tasker content</p>}
-          </div> */}
         </div>
 
         {/* Form */}
@@ -94,11 +88,7 @@ export default function LoginPage() {
           {/* Submit */}
           <button
             type="submit"
-            className="mt-2 px-6 py-4 rounded-2xl font-bold text-white shadow-lg transition-transform hover:-translate-y-0.5"
-            style={{
-              background:
-                "linear-gradient(135deg, rgb(102, 126, 234) 0%, rgb(118, 75, 162) 100%)",
-            }}
+            className="mt-2 px-6 py-4 rounded-2xl font-bold text-white shadow-lg transition-transform hover:-translate-y-0.5 btn-gradient"
           >
             Sign in
           </button>

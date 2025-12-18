@@ -1,4 +1,8 @@
 /* Minimal CSS - keep it simple */
+:root {
+  --primary: #764ba2;
+  --secodary: #667eea;
+}
 
 * {
   box-sizing: border-box;
@@ -6,11 +10,28 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    sans-serif;
   background-color: #f9fafb;
   color: #111;
 }
 
 #root {
   min-height: 100vh;
+}
+
+.btn-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--secodary) 0%,
+    var(--primary) 100%
+  ) !important;
+}
+
+.bg-gradient-color {
+  background: linear-gradient(
+    135deg,
+    rgb(102, 126, 234) 0%,
+    rgb(118, 75, 162) 100%
+  ) !important;
 }

@@ -215,13 +215,13 @@ export default function Home() {
       desc: "Leaks, clogs & installations",
       to: "/plumbing",
     },
-    {
-      icon: "🔧",
-      name: "Assembly",
-      desc: "Furniture & equipment setup",
-      to: "/assembly",
-    },
-    { icon: "📺", name: "Mounting", desc: "TVs, shelves & wall fixtures" },
+    // {
+    //   icon: "🔧",
+    //   name: "Assembly",
+    //   desc: "Furniture & equipment setup",
+    //   to: "/assembly",
+    // },
+    // { icon: "📺", name: "Mounting", desc: "TVs, shelves & wall fixtures" },
     {
       icon: "📦",
       name: "Moving",
@@ -234,13 +234,13 @@ export default function Home() {
       desc: "Deep cleaning & maintenance",
       to: "/cleaning",
     },
-    {
-      icon: "⚡",
-      name: "Electrical",
-      desc: "Fixtures\n& troubleshooting",
-      to: "/electrician",
-    },
-    { icon: "🛠️", name: "Home Repairs", desc: "Fix-it tasks & maintenance" },
+    // {
+    //   icon: "⚡",
+    //   name: "Electrical",
+    //   desc: "Fixtures\n& troubleshooting",
+    //   to: "/electrician",
+    // },
+    // { icon: "🛠️", name: "Home Repairs", desc: "Fix-it tasks & maintenance" },
   ];
 
   const featuredProjects = [
@@ -400,95 +400,6 @@ export default function Home() {
   return (
     <div style={{ minHeight: "100vh", background: "#ffffff" }}>
       {/* NAV / HEADER - Sticky */}
-      {/* <header
-        className="main-header"
-        style={{
-          position: "sticky",
-          top: 0,
-          zIndex: 1000,
-          background: "rgba(255, 255, 255, 0.98)",
-          backdropFilter: "blur(20px)",
-          borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
-          padding: "16px 40px",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <div
-          style={{
-            fontSize: 28,
-            fontWeight: 900,
-            background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-          }}
-        >
-          EZRA
-        </div>
-        <nav
-          className="header-nav"
-          style={{ display: "flex", alignItems: "center", gap: 32 }}
-        >
-          <button
-            type="button"
-            onClick={openProviderModal}
-            className="p-5 nav-link-desktop"
-            style={{
-              color: "#4b5563",
-              textDecoration: "none",
-              fontWeight: 500,
-              fontSize: 15,
-              background: "transparent",
-              border: "none",
-              cursor: "pointer",
-            }}
-          >
-            Become an EZRA
-          </button>
-          <a
-            href="#how-it-works"
-            className="nav-link-desktop"
-            style={{
-              color: "#4b5563",
-              textDecoration: "none",
-              fontWeight: 500,
-              fontSize: 15,
-            }}
-          >
-            How it Works
-          </a>
-          <a
-            href="#"
-            className="nav-link-desktop"
-            style={{
-              color: "#4b5563",
-              textDecoration: "none",
-              fontWeight: 500,
-              fontSize: 15,
-            }}
-          >
-            Login
-          </a>
-          <button
-            type="button"
-            onClick={openHelpModal}
-            style={{
-              padding: "12px 24px",
-              background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-              color: "white",
-              borderRadius: 12,
-              border: "none",
-              fontWeight: 600,
-              fontSize: 15,
-              boxShadow: "0 4px 15px rgba(102, 126, 234, 0.3)",
-              cursor: "pointer",
-            }}
-          >
-            Get Help
-          </button>
-        </nav>
-      </header> */}
       <Header onOpenHelp={openHelpModal} onOpenProvider={openProviderModal} />
 
       {/* CTA BUTTONS AT TOP */}
@@ -548,44 +459,16 @@ export default function Home() {
       </div>
 
       {/* HERO SECTION */}
-      <section
-        className="hero-section"
-        style={{
-          maxWidth: 1400,
-          margin: "0 auto",
-          padding: "100px 40px",
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: 60,
-          alignItems: "center",
-        }}
-      >
+      <section className="hero-section max-w-[1400px] mx-auto px-10 py-[100px] grid grid-cols-1 lg:grid-cols-2 gap-[60px] items-center">
         <div>
-          <h1
-            style={{
-              fontSize: 56,
-              fontWeight: 900,
-              color: "#1a1a1a",
-              marginBottom: 24,
-              lineHeight: 1.1,
-              letterSpacing: -2,
-            }}
-          >
+          <h1 className="text-[56px] font-black text-[#1a1a1a] mb-6 leading-[1.1] tracking-[-2px]">
             Hire skilled helpers for anything on your list.
           </h1>
-          <p
-            style={{
-              fontSize: 20,
-              color: "#4b5563",
-              marginBottom: 32,
-              lineHeight: 1.6,
-              fontWeight: 400,
-            }}
-          >
+          <p className="text-md lg:text-xl text-[#4b5563] mb-8 leading-[1.6] font-normal">
             From mounting to moving, book trusted locals who show up ready to
             help.
           </p>
-          <div style={{ display: "flex", gap: 16, marginBottom: 24 }}>
+          <div className="grid md:flex items-center gap-[20px] mb-6">
             <ServiceDropdownButton
               label="Get Help Today"
               menuAlignment="left"
@@ -596,6 +479,7 @@ export default function Home() {
                 borderRadius: 14,
                 fontWeight: 700,
                 fontSize: 16,
+                width: "100%",
                 boxShadow: "0 10px 30px rgba(102, 126, 234, 0.4)",
               }}
             />
@@ -680,144 +564,49 @@ export default function Home() {
       </section>
 
       {/* CATEGORY CAROUSEL - Scrolls Right */}
-      <section
-        style={{
-          position: "relative",
-          margin: "0 -80px",
-          padding: "80px clamp(40px, 8vw, 120px)",
-          background: "#f9fafb",
-          overflow: "visible",
-        }}
-      >
-        <h2
-          style={{
-            textAlign: "center",
-            fontSize: 42,
-            fontWeight: 800,
-            marginBottom: 48,
-            color: "#1a1a1a",
-          }}
-        >
+      <section className="relative bg-gray-50 py-20 px-[clamp(20px,8vw,120px)]">
+        <h2 className="text-center text-[32px] lg:text-[42px] font-extrabold mb-6 lg:mb-12 text-gray-900">
           Popular Services
         </h2>
+
         <div
-          style={{
-            display: "flex",
-            gap: 24,
-            overflow: "hidden",
-            margin: "0 auto",
-            maxWidth: 1600,
-          }}
+          className="max-w-[1200px] mx-auto grid gap-6 px-4 
+                  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
         >
-          <div
-            style={{
-              display: "flex",
-              gap: 24,
-              animation: "scrollRight 30s linear infinite",
-            }}
-          >
-            {[...categories, ...categories].map((cat, idx) => {
-              const content = (
-                <div
-                  style={{
-                    background: "white",
-                    borderRadius: 20,
-                    padding: "32px 24px",
-                    textAlign: "center",
-                    boxShadow: "0 4px 15px rgba(0, 0, 0, 0.08)",
-                    border: "1px solid #f3f4f6",
-                    width: "220px",
-                    minWidth: "220px",
-                    height: "220px",
-                    flexShrink: 0,
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    gap: 12,
-                    transition: "transform 0.2s, box-shadow 0.2s",
-                  }}
-                >
-                  <div style={{ fontSize: 48 }}>{cat.icon}</div>
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      gap: 8,
-                      minHeight: 60,
-                    }}
-                  >
-                    <h3
-                      style={{
-                        fontSize: 20,
-                        fontWeight: 700,
-                        margin: 0,
-                        color: "#1a1a1a",
-                        whiteSpace: "nowrap",
-                        overflow: "hidden",
-                        textOverflow: "ellipsis",
-                        maxWidth: "100%",
-                      }}
-                    >
-                      {cat.name}
-                    </h3>
-                    <p
-                      style={{
-                        fontSize: 14,
-                        color: "#6b7280",
-                        margin: 0,
-                        display: "-webkit-box",
-                        WebkitLineClamp: 2,
-                        WebkitBoxOrient: "vertical",
-                        overflow: "hidden",
-                        textOverflow: "ellipsis",
-                        maxWidth: "100%",
-                      }}
-                    >
-                      {cat.desc}
-                    </p>
-                  </div>
+          {categories.map((cat, idx) => {
+            const content = (
+              <div
+                className="bg-white rounded-2xl p-8 text-center border border-gray-100 shadow-md 
+                        h-[220px] flex flex-col items-center justify-between gap-3 
+                        transition-all duration-200 hover:-translate-y-1.5 hover:shadow-xl"
+              >
+                <div className="text-5xl">{cat.icon}</div>
+
+                <div className="min-h-[60px]">
+                  <h3 className="text-xl font-bold text-gray-900 truncate">
+                    {cat.name}
+                  </h3>
+                  <p className="mt-2 text-sm text-gray-500 line-clamp-2">
+                    {cat.desc}
+                  </p>
                 </div>
-              );
+              </div>
+            );
 
-              if (cat.to) {
-                return (
-                  <Link
-                    key={`${cat.name}-${idx}`}
-                    to={cat.to}
-                    style={{
-                      textDecoration: "none",
-                      color: "inherit",
-                      display: "inline-block",
-                    }}
-                    onMouseEnter={(e) => {
-                      const card = e.currentTarget.firstChild;
-                      card.style.transform = "translateY(-6px)";
-                      card.style.boxShadow =
-                        "0 12px 24px rgba(102, 126, 234, 0.2)";
-                    }}
-                    onMouseLeave={(e) => {
-                      const card = e.currentTarget.firstChild;
-                      card.style.transform = "translateY(0)";
-                      card.style.boxShadow = "0 4px 15px rgba(0, 0, 0, 0.08)";
-                    }}
-                  >
-                    {content}
-                  </Link>
-                );
-              }
-
+            if (cat.to) {
               return (
-                <div
-                  key={`${cat.name}-${idx}`}
-                  style={{ display: "inline-block" }}
+                <Link
+                  key={idx}
+                  to={cat.to}
+                  className="no-underline text-inherit"
                 >
                   {content}
-                </div>
+                </Link>
               );
-            })}
-          </div>
+            }
+
+            return <div key={idx}>{content}</div>;
+          })}
         </div>
       </section>
 
@@ -915,88 +704,31 @@ export default function Home() {
       </section>
 
       {/* CURRENT POSTINGS CAROUSEL - Scrolls Left */}
-      <section
-        style={{
-          maxWidth: 1400,
-          margin: "0 auto",
-          padding: "80px 40px",
-          background: "#ffffff",
-          overflow: "hidden",
-        }}
-      >
-        <h2
-          style={{
-            textAlign: "center",
-            fontSize: 42,
-            fontWeight: 800,
-            marginBottom: 48,
-            color: "#1a1a1a",
-          }}
-        >
+      <section className="max-w-[1400px] mx-auto px-10 py-20 bg-white overflow-hidden">
+        <h2 className="text-center text-[32px] lg:text-[42px] font-extrabold mb-6 lg:mb-12 text-gray-900">
           Current Postings
         </h2>
-        <div
-          style={{
-            display: "flex",
-            gap: 24,
-            overflow: "hidden",
-            justifyContent: "flex-end",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              gap: 24,
-              animation: "scrollLeft 40s linear infinite",
-            }}
-          >
+
+        <div className="flex gap-6 overflow-hidden justify-end p-8">
+          <div className="flex gap-6 animate-scroll-left">
             {[...featuredProjects, ...featuredProjects].map((project, idx) => (
               <div
                 key={idx}
-                style={{
-                  background: "white",
-                  borderRadius: 20,
-                  overflow: "hidden",
-                  boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
-                  border: "1px solid #f3f4f6",
-                  transition: "transform 0.3s",
-                  minWidth: "300px",
-                  flexShrink: 0,
-                }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.transform = "translateY(-8px)")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.transform = "translateY(0)")
-                }
+                className="bg-white rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.1)] border border-gray-100 min-w-[300px] flex-shrink-0 transform transition-transform duration-300 hover:-translate-y-2"
               >
-                <div
-                  style={{ width: "100%", height: "200px", overflow: "hidden" }}
-                >
+                <div className="w-full h-[200px] overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                    }}
+                    className="w-full h-full object-cover"
                   />
                 </div>
-                <div style={{ padding: "24px" }}>
-                  <h3
-                    style={{
-                      fontSize: 20,
-                      fontWeight: 700,
-                      marginBottom: 8,
-                      color: "#1a1a1a",
-                    }}
-                  >
+
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2 text-neutral-900">
                     {project.title}
                   </h3>
-                  <div
-                    style={{ fontSize: 18, fontWeight: 700, color: "#667eea" }}
-                  >
+                  <div className="text-lg font-bold text-indigo-500">
                     Starting at {project.price}
                   </div>
                 </div>
@@ -1007,63 +739,26 @@ export default function Home() {
       </section>
 
       {/* REVIEWS */}
-      <section
-        style={{
-          maxWidth: 1400,
-          margin: "0 auto",
-          padding: "80px 40px",
-          background: "#f9fafb",
-        }}
-      >
-        <h2
-          style={{
-            textAlign: "center",
-            fontSize: 42,
-            fontWeight: 800,
-            marginBottom: 48,
-            color: "#1a1a1a",
-          }}
-        >
+      <section className="max-w-[1400px] mx-auto px-10 py-20 bg-gray-50">
+        <h2 className="text-center text-[32px] lg:text-[42px] font-extrabold mb-6 lg:mb-12 text-gray-900">
           People love working with skilled locals
         </h2>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-            gap: 24,
-          }}
-        >
+
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6">
           {reviews.map((review, idx) => (
             <div
               key={idx}
-              style={{
-                background: "white",
-                borderRadius: 20,
-                padding: "32px",
-                boxShadow: "0 4px 15px rgba(0, 0, 0, 0.08)",
-                border: "1px solid #f3f4f6",
-              }}
+              className="bg-white rounded-2xl p-8 shadow-[0_4px_15px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col"
             >
-              <p
-                style={{
-                  fontSize: 16,
-                  color: "#4b5563",
-                  marginBottom: 16,
-                  lineHeight: 1.6,
-                  fontStyle: "italic",
-                }}
-              >
+              <p className="text-base text-gray-600 mb-4 leading-relaxed italic">
                 "{review.text}"
               </p>
-              <div style={{ marginTop: "auto" }}>
-                <div
-                  style={{ fontWeight: 700, color: "#1a1a1a", marginBottom: 4 }}
-                >
+
+              <div className="mt-auto">
+                <div className="font-bold text-gray-900 mb-1">
                   {review.name}
                 </div>
-                <div style={{ fontSize: 14, color: "#6b7280" }}>
-                  {review.service}
-                </div>
+                <div className="text-sm text-gray-500">{review.service}</div>
               </div>
             </div>
           ))}
@@ -1071,65 +766,35 @@ export default function Home() {
       </section>
 
       {/* TRUST SECTION */}
-      <section
-        style={{
-          maxWidth: 1400,
-          margin: "0 auto",
-          padding: "80px 40px",
-        }}
-      >
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            gap: 40,
-          }}
-        >
-          <div style={{ textAlign: "center" }}>
-            <div style={{ fontSize: 48, marginBottom: 16 }}>😊</div>
-            <h3
-              style={{
-                fontSize: 24,
-                fontWeight: 700,
-                marginBottom: 12,
-                color: "#1a1a1a",
-              }}
-            >
+
+      <section className="max-w-[1400px] mx-auto px-10 py-20">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-10">
+          <div className="text-center">
+            <div className="text-[48px] mb-4">😊</div>
+            <h3 className="text-2xl font-bold mb-3 text-gray-900">
               Happiness Guarantee
             </h3>
-            <p style={{ fontSize: 16, color: "#6b7280", lineHeight: 1.6 }}>
+            <p className="text-base text-gray-500 leading-relaxed">
               If you're not satisfied, we make it right.
             </p>
           </div>
-          <div style={{ textAlign: "center" }}>
-            <div style={{ fontSize: 48, marginBottom: 16 }}>✓</div>
-            <h3
-              style={{
-                fontSize: 24,
-                fontWeight: 700,
-                marginBottom: 12,
-                color: "#1a1a1a",
-              }}
-            >
+
+          <div className="text-center">
+            <div className="text-[48px] mb-4">✓</div>
+            <h3 className="text-2xl font-bold mb-3 text-gray-900">
               Vetted Providers
             </h3>
-            <p style={{ fontSize: 16, color: "#6b7280", lineHeight: 1.6 }}>
+            <p className="text-base text-gray-500 leading-relaxed">
               Documented skills and identity verified.
             </p>
           </div>
-          <div style={{ textAlign: "center" }}>
-            <div style={{ fontSize: 48, marginBottom: 16 }}>💬</div>
-            <h3
-              style={{
-                fontSize: 24,
-                fontWeight: 700,
-                marginBottom: 12,
-                color: "#1a1a1a",
-              }}
-            >
+
+          <div className="text-center">
+            <div className="text-[48px] mb-4">💬</div>
+            <h3 className="text-2xl font-bold mb-3 text-gray-900">
               Dedicated Support
             </h3>
-            <p style={{ fontSize: 16, color: "#6b7280", lineHeight: 1.6 }}>
+            <p className="text-base text-gray-500 leading-relaxed">
               Real people, 7 days a week.
             </p>
           </div>
@@ -1139,45 +804,18 @@ export default function Home() {
       {/* HOW IT WORKS */}
       <section
         id="how-it-works"
-        style={{
-          maxWidth: 1400,
-          margin: "0 auto",
-          padding: "80px 40px",
-          background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-        }}
+        className="max-w-[1400px] mx-auto px-10 py-20 bg-gradient-color rounded-t-[24px]"
       >
-        <div
-          style={{ textAlign: "center", maxWidth: 720, margin: "0 auto 48px" }}
-        >
-          <h2
-            style={{
-              fontSize: 42,
-              fontWeight: 800,
-              marginBottom: 16,
-              color: "white",
-            }}
-          >
+        <div className="text-center max-w-[720px] mx-auto mb-12">
+          <h2 className="text-[32px] lg:text-[42px] font-extrabold mb-4 text-white">
             How it Works
           </h2>
-          <p
-            style={{
-              fontSize: 18,
-              color: "rgba(255,255,255,0.92)",
-              lineHeight: 1.7,
-              fontWeight: 500,
-            }}
-          >
+          <p className="text-lg font-medium text-white/90 leading-relaxed">
             Ezra matches you with vetted pros for home services in minutes.
           </p>
         </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-            gap: 32,
-          }}
-        >
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-8">
           {[
             {
               number: "1",
@@ -1202,38 +840,15 @@ export default function Home() {
           ].map((step) => (
             <div
               key={step.number}
-              style={{
-                textAlign: "center",
-                color: "white",
-                background: "rgba(255, 255, 255, 0.12)",
-                borderRadius: 24,
-                padding: "28px 20px",
-                backdropFilter: "blur(6px)",
-                border: "1px solid rgba(255,255,255,0.2)",
-                boxShadow: "0 18px 40px rgba(79, 70, 229, 0.2)",
-              }}
+              className="text-center text-white bg-white/10 rounded-3xl px-5 py-7 backdrop-blur-md border border-white/20 shadow-[0_18px_40px_rgba(79,70,229,0.2)]"
             >
-              <div
-                style={{
-                  width: 60,
-                  height: 60,
-                  borderRadius: "50%",
-                  margin: "0 auto 18px",
-                  background: "rgba(255,255,255,0.22)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  color: "white",
-                  fontSize: 26,
-                  fontWeight: 800,
-                }}
-              >
+              <div className="w-[60px] h-[60px] rounded-full mx-auto mb-4 bg-white/20 flex items-center justify-center text-white text-[26px] font-extrabold">
                 {step.number}
               </div>
-              <h3 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>
-                {step.title}
-              </h3>
-              <p style={{ fontSize: 16, opacity: 0.9, lineHeight: 1.6 }}>
+
+              <h3 className="text-[22px] font-bold mb-3">{step.title}</h3>
+
+              <p className="text-base leading-relaxed text-white/90">
                 {step.text}
               </p>
             </div>
@@ -1941,93 +1556,6 @@ export default function Home() {
           </div>
         </div>
       )}
-
-      {/* <style>{`
-        @keyframes scrollRight {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-
-        @keyframes scrollLeft {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(50%);
-          }
-        }
-
-        @keyframes float {
-          0%, 100% { transform: translate(0, 0) rotate(0deg); }
-          33% { transform: translate(30px, -30px) rotate(120deg); }
-          66% { transform: translate(-20px, 20px) rotate(240deg); }
-        }
-
-        
-        @media (max-width: 768px) {
-          .main-header {
-            padding: 12px 20px !important;
-          }
-
-          .header-nav {
-            gap: 12px !important;
-          }
-
-          .nav-link-desktop {
-            display: none !important;
-          }
-
-          .hero-section {
-            grid-template-columns: 1fr !important;
-            padding: 60px 20px !important;
-            gap: 40px !important;
-          }
-
-          .hero-section h1 {
-            font-size: 36px !important;
-          }
-
-          .footer-grid {
-            grid-template-columns: repeat(2, 1fr) !important;
-            gap: 30px !important;
-            padding: 40px 20px 30px !important;
-          }
-
-          .main-footer {
-            padding: 40px 20px 30px !important;
-          }
-
-          .footer-bottom {
-            flex-direction: column !important;
-            gap: 20px !important;
-            text-align: center !important;
-            padding-top: 30px !important;
-          }
-
-          .footer-copyright {
-            font-size: 12px !important;
-          }
-        }
-
-        @media (max-width: 480px) {
-          .footer-grid {
-            grid-template-columns: 1fr !important;
-            gap: 24px !important;
-          }
-
-          .hero-section h1 {
-            font-size: 32px !important;
-          }
-
-          .hero-section {
-            padding: 40px 16px !important;
-          }
-        }
-      `}</style> */}
     </div>
   );
 }
